@@ -1,10 +1,10 @@
-{{ $.Scratch.Set "isPost" false }}
+{{ $.Scratch.Set "isContent" false }}
 {{ if .IsPage }}
-  {{ if eq .Type "post" }}
-    {{ $.Scratch.Set "isPost" true }}
+  {{ if (or (eq .Type "post") (eq .Type "recipe")) }}
+    {{ $.Scratch.Set "isContent" true }}
   {{ end }}
 {{ end }}
-{{ if and (and ($.Scratch.Get "isPost") (lt .Site.Params.sidebarBehavior 3)) (or (and .Site.Params.clearReading (not .Params.clearReading)) .Params.clearReading) }}
+{{ if and (and ($.Scratch.Get "isContent") (lt .Site.Params.sidebarBehavior 3)) (or (and .Site.Params.clearReading (not .Params.clearReading)) .Params.clearReading) }}
   {{ .Scratch.Set "sidebarBehavior" (add .Site.Params.sidebarBehavior 3) }}
 {{ else }}
   {{ .Scratch.Set "sidebarBehavior" .Site.Params.sidebarBehavior }}
