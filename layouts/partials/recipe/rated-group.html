@@ -1,0 +1,17 @@
+<!-- only show rating header if there are recipes with that rating -->
+{{ $.Scratch.Set "shownRatingHeader" "0"}}
+{{ range where (where .Data.Pages "Type" "recipe") ".Params.rating" "==" ($.Scratch.Get "rating")}}
+  {{ if (eq ($.Scratch.Get "shownRatingHeader") "0")}}
+    <!-- only print the heading once -->
+    {{ $.Scratch.Set "shownRatingHeader" "1"}}
+    <h1 itemprop="headline">
+      <a class="link-unstyled" href="{{ .Permalink }}">
+        <p>Rated: {{ $.Scratch.Get "rating" }}</p>
+      </a>
+    </h1>
+  {{ end }}
+{{ end }}
+
+{{ range where (where .Data.Pages "Type" "recipe") ".Params.rating" "==" ($.Scratch.Get "rating")}}
+  {{ partial "recipe/summary.html" . }}
+{{ end }}

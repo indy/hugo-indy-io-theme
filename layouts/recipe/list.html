@@ -9,9 +9,26 @@
                {{ if eq .Params.covermeta "out" }}hasCoverMetaOut{{ else }}hasCoverMetaIn{{ end }}
                {{ with .Params.coverCaption }}hasCoverCaption{{ end }}">
         <section class="postShorten-group main-content-wrap">
-          {{ range (where .Data.Pages "Type" "recipe") }}
-            {{ .Render "summary" }}
-          {{ end }}
+          {{ $.Scratch.Set "rating" "10" }}
+          {{ partial "recipe/rated-group.html" . }}
+          {{ $.Scratch.Set "rating" "9" }}
+          {{ partial "recipe/rated-group.html" . }}
+          {{ $.Scratch.Set "rating" "8" }}
+          {{ partial "recipe/rated-group.html" . }}
+          {{ $.Scratch.Set "rating" "7" }}
+          {{ partial "recipe/rated-group.html" . }}
+          {{ $.Scratch.Set "rating" "6" }}
+          {{ partial "recipe/rated-group.html" . }}
+          {{ $.Scratch.Set "rating" "5" }}
+          {{ partial "recipe/rated-group.html" . }}
+          {{ $.Scratch.Set "rating" "4" }}
+          {{ partial "recipe/rated-group.html" . }}
+          {{ $.Scratch.Set "rating" "3" }}
+          {{ partial "recipe/rated-group.html" . }}
+          {{ $.Scratch.Set "rating" "2" }}
+          {{ partial "recipe/rated-group.html" . }}
+          {{ $.Scratch.Set "rating" "1" }}
+          {{ partial "recipe/rated-group.html" . }}
         </section>
         {{ partial "footer.html" . }}
       </div>
