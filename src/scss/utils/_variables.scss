@@ -25,6 +25,10 @@ $font-families: (
    'sidebar':           $open-sans-sans-serif
 );
 
+$indy-background-color: #e5e4e2;
+$indy-link-color:       #9d6b20;
+
+
 // equal to 15px
 $font-size-base:      1.6rem;
 $font-color-base:     #5d686f;
@@ -53,9 +57,10 @@ $colors: (
     'purple':  #cf6ae0,
     'base':    $font-color-base,
     'warning':  #f5aa0a,
-    'light':   #9eabb3,
+    'light':   #9c9c9c,
+    'isgbackground': $indy-background-color,
      // use for tag `a`
-    'link':    #349ef3
+    'link':    $indy-link-color
 );
 
 // Z-indexes
@@ -139,9 +144,9 @@ $about: (
 // Header
 $header:(
     'height':     55px,
-    'background': #fff,
+    'background': $indy-background-color,
     'color':      #88909a,
-    'border':     1px solid #eef2f8
+    'border':     1px solid #d5d4d2
 );
 
 // Sidebar
@@ -149,14 +154,14 @@ $sidebar: (
     'md-screen-width':  75px,
     'lg-screen-width':  250px,
     'xlg-screen-width': 500px,
-    'background':       rgba(17, 26, 35, 0),
+    'background':       rgba(146, 146, 146, 255),
     'color':            #ebebeb
 );
 
 // Main
 $main: (
     'padding-top':      15px,
-    'background-color': #fff
+    'background-color': $indy-background-color
 );
 
 // Components settings

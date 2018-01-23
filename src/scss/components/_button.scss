@@ -1,7 +1,7 @@
 .btn {
     width:          auto;
     height:         auto;
-    background:     white;
+    background:     map-get($colors, isgbackground);
     border-radius:  3px;
     padding:        8px 15px;
     margin:         0;
