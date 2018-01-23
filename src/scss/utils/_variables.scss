@@ -4,21 +4,21 @@
 // Font families
 $open-sans:            'Open Sans';
 $open-sans-sans-serif: 'Open Sans', sans-serif;
-$merriweather-serif:   'Merriweather', serif;
+$lato:                 'Lato', sans-serif;
 $menlo:                 Menlo, Consolas, monospace;
 
 $font-family-base: $open-sans-sans-serif;
 
 $font-families: (
    // base
-   'headings':          $open-sans-sans-serif,
+   'headings':          $lato,
    // components
    'code':              $menlo,
-   'caption':           $merriweather-serif,
+   'caption':           $open-sans,
    'image-gallery':     $open-sans,
-   'post-header-cover': $merriweather-serif,
-   'post-meta':         $open-sans-sans-serif,
-   'post-content':      $merriweather-serif,
+   'post-header-cover': $open-sans,
+   'post-meta':         $lato,
+   'post-content':      $open-sans-sans-serif,
    'post-excerpt-link': $open-sans-sans-serif,
    'highlight':         $menlo,
    // layout

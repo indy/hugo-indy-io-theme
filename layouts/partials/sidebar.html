@@ -1,7 +1,7 @@
 <nav id="sidebar" data-behavior="{{ .Scratch.Get "sidebarBehavior" }}">
   <div class="sidebar-container">
     <div class="sidebar-site-title">
-      <h1>{{ .Site.Title }}</h1>
+      <a href="/"><h1>{{ .Site.Title }}</h1></a>
     </div>
     <ul class="sidebar-buttons">
       {{ partial "menu.html" (dict "menu" .Site.Menus.main "root" $) }}
