@@ -17,6 +17,12 @@
     .sidebar-container {
         overflow: auto;
     }
+    .sidebar-site-title {
+      color:         map-get($sidebar, color);
+      text-align:    center;
+      padding-top:   18px;
+      margin-bottom: 15px;
+    }
     // Author information
     .sidebar-profile {
         color:         map-get($sidebar, color);
