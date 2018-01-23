@@ -1,6 +1,6 @@
 {{ $.Scratch.Set "isContent" false }}
 {{ if .IsPage }}
-  {{ if (or (eq .Type "post") (eq .Type "recipe")) }}
+  {{ if (or (eq .Type "post") (eq .Type "project") (eq .Type "recipe")) }}
     {{ $.Scratch.Set "isContent" true }}
   {{ end }}
 {{ end }}
