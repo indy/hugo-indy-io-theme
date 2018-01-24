@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
     font-family: $font-family-base;
     // equal to 10px, useful to use em and rem

@@ -1,0 +1,40 @@
+.seni-gallery-wrap {
+    display:       block;
+    max-width:     map-get($seni-gallery, max-width);
+    margin:        0 auto;
+    padding-right: map-get($seni-gallery, padding-right-left);
+    padding-left:  map-get($seni-gallery, padding-right-left);
+}
+
+.seni-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.seni-content {
+  text-rendering: optimizelegibility;
+  font-family:    map-get($font-families, 'post-content');
+  color:          map-get($colors, base);
+  margin-top:     20px;
+  font-weight:    400;
+  overflow:       hidden;
+  @include prefix('hypens', 'auto', 'webkit' 'moz');
+}
+
+.seni-image {
+  width: 100%;
+}
+
+.seni-listing {
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+
+.seni-thumbnail {
+  width: 100%;
+}
+
+.seni-gallery .seni-title {
+  text-align: center;
+}
