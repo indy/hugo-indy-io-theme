@@ -82,10 +82,10 @@
   translation: "of {{ .Paginator.TotalPages }}"
 
 - id: "pagination.newer_posts"
-  translation: "NEWER POSTS"
+  translation: "NEWER"
 
 - id: "pagination.older_posts"
-  translation: "OLDER POSTS"
+  translation: "OLDER"
 
 - id: "pagination.previous"
   translation: "PREVIOUS"

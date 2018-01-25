@@ -76,10 +76,10 @@
   translation: "sur {{ .Paginator.TotalPages }}"
 
 - id: "pagination.newer_posts"
-  translation: "POSTS RÉCENTS"
+  translation: "RÉCENTS"
 
 - id: "pagination.older_posts"
-  translation: "POSTS ANCIENTS"
+  translation: "ANCIENTS"
 
 - id: "pagination.previous"
   translation: "PRÉCÉDENT"

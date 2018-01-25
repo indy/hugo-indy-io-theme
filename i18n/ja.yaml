@@ -82,10 +82,10 @@
   translation: "of {{ .Paginator.TotalPages }}"
 
 - id: "pagination.newer_posts"
-  translation: "新しい投稿"
+  translation: "次"
 
 - id: "pagination.older_posts"
-  translation: "古い投稿"
+  translation: "前"
 
 - id: "pagination.previous"
   translation: "前"

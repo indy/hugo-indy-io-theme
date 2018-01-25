@@ -1,8 +1,6 @@
-{{ $.Scratch.Set "isContent" false }}
-{{ if .IsPage }}
-  {{ if (or (eq .Type "post") (eq .Type "project") (eq .Type "recipe")) }}
-    {{ $.Scratch.Set "isContent" true }}
-  {{ end }}
+{{ $.Scratch.Set "isContent" true }}
+{{ if (eq ($.Scratch.Get "isFrontPage") true)}}
+  {{ $.Scratch.Set "isContent" false }}
 {{ end }}
 {{ if and (and ($.Scratch.Get "isContent") (lt .Site.Params.sidebarBehavior 3)) (or (and .Site.Params.clearReading (not .Params.clearReading)) .Params.clearReading) }}
   {{ .Scratch.Set "sidebarBehavior" (add .Site.Params.sidebarBehavior 3) }}
