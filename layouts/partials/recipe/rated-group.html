@@ -4,11 +4,7 @@
   {{ if (eq ($.Scratch.Get "shownRatingHeader") "0")}}
     <!-- only print the heading once -->
     {{ $.Scratch.Set "shownRatingHeader" "1"}}
-    <h1 itemprop="headline">
-      <a class="link-unstyled" href="{{ .Permalink }}">
-        <p>Rated: {{ $.Scratch.Get "rating" }}</p>
-      </a>
-    </h1>
+    <h1 class="recipe-heading" itemprop="headline">Rated: {{ $.Scratch.Get "rating" }}</h1>
   {{ end }}
 {{ end }}
 
