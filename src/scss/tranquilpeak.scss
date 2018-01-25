@@ -5,23 +5,19 @@
 @import
     'utils/mixins/bottom-bar',
     'utils/mixins/button',
-    'utils/mixins/category',
     'utils/mixins/form',
     'utils/mixins/header',
     'utils/mixins/main',
     'utils/mixins/opacity',
     'utils/mixins/post-header-cover',
     'utils/mixins/prefix',
-    'utils/mixins/share-options-bar',
-    'utils/mixins/sidebar',
-    'utils/mixins/tag';
+    'utils/mixins/sidebar';
 
 @import
     'base/base',
     'base/custom';
 
-@import 'layouts/about',
-'layouts/blog',
+@import 'layouts/blog',
 'layouts/bottom-bar',
 'layouts/cover',
 'layouts/footer',
@@ -31,7 +27,6 @@
 
 @import
     'components/alert',
-    'components/archive',
     'components/box',
     'components/button',
     'components/caption',
@@ -55,14 +50,9 @@
     'components/postShorten',
     'components/recipe',
     'components/seni-gallery',
-    'components/share-options-bar',
-    'components/tag',
     'components/text',
     'components/tooltip',
     'components/video';
-
-@import
-    'pages/search';
 
 @import
     'themes/hljs-tranquilpeak',

@@ -1,17 +1,17 @@
 name = "Tranquilpeak"
 license = "GNU General Public License v3.0"
-licenselink = "https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/LICENSE"
-description = "A gorgeous responsive theme for Hugo blog framework"
-homepage = "https://github.com/kakawait/hugo-tranquilpeak-theme"
+licenselink = "https://github.com/indy/hugo-tranquilpeak-theme/blob/master/LICENSE"
+description = "A responsive theme for Hugo blog framework"
+homepage = "https://github.com/indy/hugo-tranquilpeak-theme"
 tags = ["blog", "minimal", "responsive", "personal", "customizable", "creative", "fontawesome", "highlight.js"]
-features = ["blog", "themes", "disqus", "minimal", "responsive", "font awesome", "highlight.js"]
+features = ["blog", "themes", "minimal", "responsive", "font awesome", "highlight.js"]
 min_version = 0.20
 
 [author]
-  name = "Thibaud Leprêtre"
-  homepage = "https://github.com/kakawait"
+  name = "Inderjit Gill"
+  homepage = "https://github.com/indy"
 
 [original]
   name = "Tranquilpeak"
-  homepage = "https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak"
-  repo = "https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak.git"
+  homepage = "https://github.com/kakawait"
+  repo = "https://github.com/kakawait/hugo-tranquilpeak-theme.git"
