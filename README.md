@@ -1,6 +1,6 @@
 # Tranquilpeak
 
-A gorgeous responsive theme for Hugo blog framework.
+A responsive theme for Hugo blog framework.
 
 ![Tranquilpeak](https://raw.githubusercontent.com/kakawait/hugo-tranquilpeak-theme/master/showcase.png)
 
