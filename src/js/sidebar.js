@@ -1,4 +1,4 @@
-(function($) {
+(function() {
   'use strict';
 
   // Open and close the sidebar by swiping the sidebar and the blog and vice versa
@@ -8,18 +8,13 @@
    * @constructor
    */
   var Sidebar = function() {
-    this.$sidebar = $('#sidebar');
-    this.$openBtn = $('#btn-open-sidebar');
-    // Elements where the user can click to close the sidebar
-    this.$closeBtn = $('#header, #main, .post-header-cover');
-    // Elements affected by the swipe of the sidebar
-    // The `pushed` class is added to each elements
-    // Each element has a different behavior when the sidebar is opened
-    this.$blog = $('.post-bottom-bar, #header, #main, .post-header-cover');
-    // If you change value of `mediumScreenWidth`,
-    // you have to change value of `$screen-min: (md-min)` too
-    // in `source/_css/utils/variables.scss`
-    this.$body = $('body');
+    this.sidebar = document.getElementById('sidebar');
+    this.openBtn = document.getElementById('btn-open-sidebar');
+    // this.blog == header + main
+    this.header = document.getElementById('header');
+    this.main = document.getElementById('main');
+    this.body = document.body;
+
     this.mediumScreenWidth = 768;
   };
 
@@ -30,22 +25,20 @@
      */
     run: function() {
       var self = this;
-      // Detect the click on the open button
-      this.$openBtn.click(function() {
-        if (!self.$sidebar.hasClass('pushed')) {
+
+      this.openBtn.addEventListener('click', function() {
+        // toggle open/close
+        if (self.sidebar.classList.contains('pushed')) {
+          self.closeSidebar();
+        } else {
           self.openSidebar();
         }
       });
-      // Detect the click on close button
-      this.$closeBtn.click(function() {
-        if (self.$sidebar.hasClass('pushed')) {
-          self.closeSidebar();
-        }
-      });
+
       // Detect resize of the windows
-      $(window).resize(function() {
+      window.addEventListener('resize', function() {
         // Check if the window is larger than the minimal medium screen value
-        if ($(window).width() > self.mediumScreenWidth) {
+        if (window.innerWidth > self.mediumScreenWidth) {
           self.resetSidebarPosition();
           self.resetBlogPosition();
         }
@@ -78,7 +71,7 @@
      * @return {void}
      */
     resetSidebarPosition: function() {
-      this.$sidebar.removeClass('pushed');
+      this.sidebar.classList.remove('pushed');
     },
 
     /**
@@ -86,7 +79,8 @@
      * @return {void}
      */
     resetBlogPosition: function() {
-      this.$blog.removeClass('pushed');
+      this.header.classList.remove('pushed');
+      this.main.classList.remove('pushed');
     },
 
     /**
@@ -97,13 +91,16 @@
       var self = this;
       // Check if the sidebar isn't swiped
       // and prevent multiple click on the open button with `.processing` class
-      if (!this.$sidebar.hasClass('pushed') && !this.$sidebar.hasClass('processing')) {
+      if (!this.sidebar.classList.contains('pushed') &&
+          !this.sidebar.classList.contains('processing')) {
         // Swipe the sidebar to the right
-        this.$sidebar.addClass('processing pushed');
+        this.sidebar.classList.add('processing', 'pushed');
         // add overflow on body to remove horizontal scroll
-        this.$body.css('overflow-x', 'hidden');
+
+        this.body.style.overflowX = 'hidden';
+
         setTimeout(function() {
-          self.$sidebar.removeClass('processing');
+          self.sidebar.classList.remove('processing');
         }, 250);
       }
     },
@@ -115,11 +112,13 @@
     swipeSidebarToLeft: function() {
       // Check if the sidebar is swiped
       // and prevent multiple click on the close button with `.processing` class
-      if (this.$sidebar.hasClass('pushed') && !this.$sidebar.hasClass('processing')) {
+      if (this.sidebar.classList.contains('pushed') &&
+          !this.sidebar.classList.contains('processing')) {
         // Swipe the sidebar to the left
-        this.$sidebar.addClass('processing').removeClass('pushed processing');
+        this.sidebar.classList.add('processing');
+        this.sidebar.classList.remove('pushed', 'processing');
         // go back to the default overflow
-        this.$body.css('overflow-x', 'auto');
+        this.body.style.overflowX = 'auto';
       }
     },
 
@@ -129,14 +128,22 @@
      */
     swipeBlogToRight: function() {
       var self = this;
+
+      var blogHasPushed = self.header.classList.contains('pushed') &&
+          self.main.classList.contains('pushed');
+      var blogHasProcessing = self.header.classList.contains('processing') &&
+          self.main.classList.contains('processing');
+
       // Check if the blog isn't swiped
       // and prevent multiple click on the open button with `.processing` class
-      if (!this.$blog.hasClass('pushed') && !this.$blog.hasClass('processing')) {
+      if (!blogHasPushed && !blogHasProcessing) {
         // Swipe the blog to the right
-        this.$blog.addClass('processing pushed');
+        this.header.classList.add('processing', 'pushed');
+        this.main.classList.add('processing', 'pushed');
 
         setTimeout(function() {
-          self.$blog.removeClass('processing');
+          self.header.classList.remove('processing');
+          self.main.classList.remove('processing');
         }, 250);
       }
     },
@@ -147,21 +154,31 @@
      */
     swipeBlogToLeft: function() {
       var self = this;
+
+      var blogHasPushed = self.header.classList.contains('pushed') &&
+          self.main.classList.contains('pushed');
+      var blogHasProcessing = self.header.classList.contains('processing') &&
+          self.main.classList.contains('processing');
+
       // Check if the blog is swiped
       // and prevent multiple click on the close button with `.processing` class
-      if (self.$blog.hasClass('pushed') && !this.$blog.hasClass('processing')) {
+      if (blogHasPushed && !blogHasProcessing) {
         // Swipe the blog to the left
-        self.$blog.addClass('processing').removeClass('pushed');
+        this.header.classList.add('processing');
+        this.main.classList.add('processing');
+        this.header.classList.remove('pushed');
+        this.main.classList.remove('pushed');
 
         setTimeout(function() {
-          self.$blog.removeClass('processing');
+          self.header.classList.remove('processing');
+          self.main.classList.remove('processing');
         }, 250);
       }
     }
   };
 
-  $(document).ready(function() {
+  document.addEventListener('DOMContentLoaded', function() {
     var sidebar = new Sidebar();
     sidebar.run();
   });
-})(jQuery);
+})();
