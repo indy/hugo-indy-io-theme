@@ -16,7 +16,6 @@ $font-families: (
    'code':              $menlo,
    'caption':           $open-sans,
    'image-gallery':     $open-sans,
-   'post-header-cover': $open-sans,
    'post-meta':         $lato,
    'post-content':      $open-sans-sans-serif,
    'post-excerpt-link': $open-sans-sans-serif,
@@ -70,7 +69,6 @@ $z-indexes: (
     // position the cover below the whole blog
     'l-cover':             -1,
     'l-main':              10,
-    'c-post-header-cover': 15,
     'l-header':            20,
     'l-sidebar':           20,
     'l-about':             30,
