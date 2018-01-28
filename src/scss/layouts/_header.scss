@@ -21,9 +21,13 @@
     #btn-open-sidebar {
         position: absolute;
         // vertical center
-        top:      20px;
-        left:     20px;
-        cursor:   pointer;
+        top:         20px;
+        left:        20px;
+        cursor:      pointer;
+        width:       1em;
+        height:      1em;
+        line-height: 0.75em;
+        fill:        map-get($header, color);
     }
     .header-right-picture {
         position: absolute;
