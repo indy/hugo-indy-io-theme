@@ -65,6 +65,14 @@
                 display: block;
                 height:  100%;
 
+                .sidebar-button-icon {
+
+                  svg {
+                    margin: 5px;
+                    fill: map-get($sidebar, color);
+                  }
+                }
+
                 &:hover,
                 &:active {
                     text-decoration: none;
