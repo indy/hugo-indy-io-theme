@@ -177,8 +177,16 @@
     }
   };
 
-  document.addEventListener('DOMContentLoaded', function() {
+  if (document.readyState === 'complete' ||
+      document.readyState === 'loaded' ||
+      document.readyState === 'interactive') {
+    // the async loading of this script occured after the DOMContentLoaded even was fired
     var sidebar = new Sidebar();
     sidebar.run();
-  });
+  } else {
+    document.addEventListener('DOMContentLoaded', function() {
+      var sidebar = new Sidebar();
+      sidebar.run();
+    });
+  }
 })();
