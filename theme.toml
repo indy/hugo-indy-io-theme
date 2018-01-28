@@ -1,10 +1,10 @@
 name = "Tranquilpeak"
 license = "GNU General Public License v3.0"
 licenselink = "https://github.com/indy/hugo-tranquilpeak-theme/blob/master/LICENSE"
-description = "A responsive theme for Hugo blog framework"
+description = "A responsive theme for Hugo based on Tranquilpeak"
 homepage = "https://github.com/indy/hugo-tranquilpeak-theme"
-tags = ["blog", "minimal", "responsive", "personal", "customizable", "creative", "fontawesome", "highlight.js"]
-features = ["blog", "themes", "minimal", "responsive", "font awesome", "highlight.js"]
+tags = ["minimal", "responsive", "personal"]
+features = ["minimal", "responsive"]
 min_version = 0.20
 
 [author]
