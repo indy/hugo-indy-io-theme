@@ -76,7 +76,7 @@
                 &:hover,
                 &:active {
                     text-decoration: none;
-                    color:           lighten(map-get($sidebar, color), 35);
+                    color:           darken(map-get($sidebar, color), 35);
                 }
             }
         }

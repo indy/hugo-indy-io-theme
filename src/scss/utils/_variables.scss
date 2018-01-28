@@ -4,33 +4,32 @@
 // Font families
 $open-sans:            'Open Sans';
 $open-sans-sans-serif: 'Open Sans', sans-serif;
-$lato:                 'Lato', sans-serif;
+$crimson-text:         'Crimson Text', serif;
 $menlo:                 Menlo, Consolas, monospace;
 
 $font-family-base: $open-sans-sans-serif;
 
 $font-families: (
    // base
-   'headings':          $lato,
+   'headings':          $open-sans-sans-serif,
    // components
    'code':              $menlo,
    'caption':           $open-sans,
    'image-gallery':     $open-sans,
-   'post-meta':         $lato,
-   'post-content':      $open-sans-sans-serif,
+   'post-meta':         $open-sans-sans-serif,
+   'post-content':      $crimson-text,
    'post-excerpt-link': $open-sans-sans-serif,
    'highlight':         $menlo,
    // layout
    'sidebar':           $open-sans-sans-serif
 );
 
-$indy-background-color: #e5e4e2;
+$indy-background-color: #f2f2f2;
 $indy-link-color:       #9d6b20;
-
 
 // equal to 15px
 $font-size-base:      1.6rem;
-$font-color-base:     #5d686f;
+$font-color-base:     #383f44;
 $line-height-base:    1.9em;
 $letter-spacing-base: 0.01em;
 
@@ -152,8 +151,8 @@ $sidebar: (
     'md-screen-width':  75px,
     'lg-screen-width':  250px,
     'xlg-screen-width': 500px,
-    'background':       rgba(146, 146, 146, 255),
-    'color':            #ebebeb
+    'background':       rgba(200, 200, 200, 255),
+    'color':            rgba(100, 100, 100, 255)
 );
 
 // Main
@@ -169,9 +168,9 @@ $main: (
 // Highlight code
 $highlight: (
     'background':  #f7f8f8,
-    'font-size':   1.4rem,
+    'font-size':   1.1rem,
     'border':      1px solid,
-    'line-height': 2.3rem
+    'line-height': 1.8rem
 );
 
 // Highlight colors
@@ -219,7 +218,7 @@ $image-gallery-photos-margin: 2px;
 
 // Main content
 $main-content: (
-    'max-width':          750px,
+    'max-width':          600px,
     'padding-right-left': 20px,
 );
 
