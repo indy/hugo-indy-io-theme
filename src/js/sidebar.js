@@ -41,8 +41,7 @@
         if (window.innerWidth > self.mediumScreenWidth) {
           self.resetSidebarPosition();
           self.resetBlogPosition();
-        }
-        else {
+        } else {
           self.closeSidebar();
         }
       });
