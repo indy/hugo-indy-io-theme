@@ -1,8 +1,8 @@
-name = "Tranquilpeak"
+name = "hugo-indy-io-theme"
 license = "GNU General Public License v3.0"
-licenselink = "https://github.com/indy/hugo-tranquilpeak-theme/blob/master/LICENSE"
+licenselink = "https://github.com/indy/hugo-indy-io-theme/blob/master/LICENSE"
 description = "A responsive theme for Hugo based on Tranquilpeak"
-homepage = "https://github.com/indy/hugo-tranquilpeak-theme"
+homepage = "https://github.com/indy/hugo-indy-io-theme"
 tags = ["minimal", "responsive", "personal"]
 features = ["minimal", "responsive"]
 min_version = 0.20

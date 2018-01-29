@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         appRoot: 'src/'
       },
       files: {
-        'layouts/partials/script.html': pipeline.tranquilpeakJsFilesToInject
+        'layouts/partials/script.html': pipeline.indyioJsFilesToInject
       }
     },
     devCss: {
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
         appRoot: 'src/'
       },
       files: {
-        'layouts/partials/head.html': pipeline.tranquilpeakCssFilesToInject
+        'layouts/partials/head.html': pipeline.indyioCssFilesToInject
       }
     },
     prodJs: {

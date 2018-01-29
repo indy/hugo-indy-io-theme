@@ -4,6 +4,6 @@ module.exports = function(grunt) {
     'clean:build',
     'syncAssets',
     'linkAssets',
-    'replace:cssTranquilpeak'
+    'replace:cssIndyio'
   ]);
 };

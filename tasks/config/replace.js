@@ -12,11 +12,11 @@ module.exports = function(grunt) {
         to: '%>'
       }]
     },
-    // Modify url of images and fonts in tranquilpeak.css to resolve images and fonts path.
-    cssTranquilpeak: {
+    // Modify url of images and fonts in indyio.css to resolve images and fonts path.
+    cssIndyio: {
       overwrite: true,
       src: [
-        'static/css/tranquilpeak.css'
+        'static/css/indyio.css'
       ],
       replacements: [{
         from: /url\(\"[.\/]+_images\//,
@@ -36,4 +36,3 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-text-replace');
 };
-

@@ -1,7 +1,7 @@
 {
-  "name": "hugo-tranquilpeak-theme",
+  "name": "hugo-indy-io-theme",
   "version": "0.4.3-BETA",
-  "description": "A gorgeous responsive theme for Hugo blog framework",
+  "description": "A Hugo theme based on hugo-tranquilpeak-theme by kakawait",
   "main": "Gruntfile.js",
   "scripts": {
     "start": "grunt default",
@@ -11,21 +11,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kakawait/hugo-tranquilpeak-theme.git"
+    "url": "https://github.com/indy/hugo-indy-io-theme.git"
   },
   "keywords": [
     "hugo",
-    "blog",
-    "tranquilpeak",
-    "tranquil",
-    "peak"
+      "blog"
   ],
-  "author": "Thibaud Leprêtre <thibaud.lepretre@gmail.com> (https://kakawait.com)",
+  "author": "Inderjit Gill <email@indy.io> (https://indy.io)",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/kakawait/hugo-tranquilpeak-theme/issues"
+    "url": "https://github.com/indy/hugo-indy-io-theme/issues"
   },
-  "homepage": "https://github.com/kakawait/hugo-tranquilpeak-theme",
+  "homepage": "https://github.com/indy/hugo-indy-io-theme",
   "devDependencies": {
     "eslint": "^2.11.1",
     "eslint-config-google": "^0.5.0",

@@ -1,17 +1,17 @@
 // Js files to inject in `layouts/partials/script.html`
-var tranquilpeakJsFilesToInject = [
-  'tranquilpeak.js'
+var indyioJsFilesToInject = [
+  'indyio.js'
 ];
 
 // Css files to inject in `layouts/partials/head.html`
-var tranquilpeakCssFilesToInject = [
-  'tranquilpeak.css'
+var indyioCssFilesToInject = [
+  'indyio.css'
 ];
 
-module.exports.tranquilpeakCssFilesToInject = tranquilpeakCssFilesToInject.map(function(path) {
+module.exports.indyioCssFilesToInject = indyioCssFilesToInject.map(function(path) {
   return 'static/css/' + path;
 });
 
-module.exports.tranquilpeakJsFilesToInject = tranquilpeakJsFilesToInject.map(function(path) {
+module.exports.indyioJsFilesToInject = indyioJsFilesToInject.map(function(path) {
   return 'static/js/' + path;
 });
