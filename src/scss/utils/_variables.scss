@@ -24,12 +24,13 @@ $font-families: (
    'sidebar':           $open-sans-sans-serif
 );
 
-$indy-background-color: #f2f2f2;
+$indy-background-color: #f1edeb;
 $indy-link-color:       #9d6b20;
+$indy-text-color:       #383f44;
 
 // equal to 15px
 $font-size-base:      1.6rem;
-$font-color-base:     #383f44;
+$font-color-base:     $indy-text-color;
 $line-height-base:    1.9em;
 $letter-spacing-base: 0.01em;
 
@@ -142,8 +143,8 @@ $about: (
 $header:(
     'height':     55px,
     'background': $indy-background-color,
-    'color':      #88909a,
-    'border':     1px solid #d5d4d2
+    'color':      $indy-text-color,
+    'border':     1px solid darken($indy-background-color, 15)
 );
 
 // Sidebar
@@ -151,7 +152,7 @@ $sidebar: (
     'md-screen-width':  75px,
     'lg-screen-width':  250px,
     'xlg-screen-width': 500px,
-    'background':       rgba(200, 200, 200, 255),
+    'background':       darken(desaturate($indy-background-color, 10%), 15),
     'color':            rgba(100, 100, 100, 255)
 );
 
@@ -167,7 +168,7 @@ $main: (
 
 // Highlight code
 $highlight: (
-    'background':  #f7f8f8,
+    'background':  lighten($indy-background-color, 4),
     'font-size':   1.1rem,
     'border':      1px solid,
     'line-height': 1.8rem
