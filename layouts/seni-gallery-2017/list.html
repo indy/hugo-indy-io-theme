@@ -1,0 +1,23 @@
+{{ partial "head.html" . }}
+  <body>
+    <div id="blog">
+      {{ partial "header.html" . }}
+      {{ partial "sidebar.html" . }}
+      <div id="main" data-behavior="{{ .Scratch.Get "sidebarBehavior" }}"
+        class="{{ with .Params.coverimage }}hasCover{{ end }}
+               {{ if eq .Params.covermeta "out" }}hasCoverMetaOut{{ else }}hasCoverMetaIn{{ end }}
+               {{ with .Params.coverCaption }}hasCoverCaption{{ end }}">
+        <section class="postShorten-group seni-gallery-wrap">
+          <h1>2017</h1>
+          <div class="seni-gallery">
+          {{ range (where .Data.Pages "Type" "senigallery") }}
+            {{ if eq (time .Params.date).Year 2017 }}
+              {{ partial "seni-listing.html" . }}
+            {{ end }}
+          {{ end }}
+          </div>
+        </section>
+        {{ partial "footer.html" . }}
+      </div>
+    </div>
+{{ partial "foot.html" . }}
