@@ -18,4 +18,4 @@ Please all the credit should be attributed to [original *Hexo* version](https://
 
 ## License
 
-hugo-tranquilpeak-theme is released under the terms of the [GNU General Public License v3.0](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/LICENSE).
+hugo-indy-io-theme is released under the terms of the [GNU General Public License v3.0](https://github.com/indy/hugo-indy-io-theme/blob/master/LICENSE).

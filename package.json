@@ -1,6 +1,6 @@
 {
   "name": "hugo-indy-io-theme",
-  "version": "0.4.3-BETA",
+  "version": "1.0.0",
   "description": "A Hugo theme based on hugo-tranquilpeak-theme by kakawait",
   "main": "Gruntfile.js",
   "scripts": {
